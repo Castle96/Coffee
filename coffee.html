@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Coffee</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { font-size: 2em; }
+        form { display: inline-block; text-align: left; }
+        label, select, input, button { display: block; margin: 10px 0; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Order Coffee</h1>
+    <form action="/confirm" method="post">
+        <label for="type">Select coffee type:</label>
+        <select id="type" name="type">
+            <option value="Espresso">Espresso</option>
+            <option value="Latte">Latte</option>
+            <option value="Cappuccino">Cappuccino</option>
+        </select>
+
+        <label for="size">Select size:</label>
+        <select id="size" name="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+
+        <label for="extra_shots">Extra espresso shots:</label>
+        <input type="number" id="extra_shots" name="extra_shots" min="0" value="0">
+
+        <label for="syrup_flavor">Syrup flavor:</label>
+        <select id="syrup_flavor" name="syrup_flavor">
+            <option value="">None</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Caramel">Caramel</option>
+            <option value="Hazelnut">Hazelnut</option>
+        </select>
+
+        <button type="submit">Confirm Order</button>
+    </form>
+</body>
+</html>
+
